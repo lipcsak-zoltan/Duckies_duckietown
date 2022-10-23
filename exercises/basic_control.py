@@ -3,6 +3,8 @@
 """
 Construire un contrôleur pour contrôler le Duckiebot en simulation en utilisant la vrai pose
 """
+import pyglet
+from pyglet.window import key
 
 import time
 import sys
