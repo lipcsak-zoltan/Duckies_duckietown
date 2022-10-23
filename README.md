@@ -4,8 +4,23 @@ Members: Lipcsák Zoltán István (XWSJPH), Pólya Mátyás Dániel (BBAGDV), Ka
 ## Topic
 Autonomous driving in Duckietown enviroment  
 ## Project description 
-Facilitation of autonomous driving in Duckietown with Reinforcement Learning methods. [TBD!]
-## Project files
-1. **preparations.ipynb** - Prepares the Duckietown simulation enviroment for the learning process.
+Facilitation of autonomous driving in Duckietown with Reinforcement Learning methods.
 ## Subject
 Deep Learning in Practice with Python and LUA (BMEVITMAV45)  
+
+## Installation
+Navigate to root of the project
+
+`pip3 install -e .`
+## Exercises
+### Running manual_control.py
+`python manual_control.py --env-name Duckietown`
+### Creating a new map
+We have created two new maps, named new_map.yaml and customMap.yaml, found in Duckies_duckietown/gym_duckietown/maps/
+
+To use them, copy them to the folder containing the original maps (if given the --map-name parameter, the program logs where it searches for it, e.g. lib/python3.6/site-packages/duckietown_world/data/gd1/maps)
+
+### Running the basic_control.py
+`python basic_control.py --map-name new_map`
+
+The run is recorded in the dl_basic.mp4 file
