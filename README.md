@@ -24,3 +24,5 @@ To use them, copy them to the folder containing the original maps (if given the 
 `python basic_control.py --map-name new_map`
 
 The run is recorded in the dl_basic.mp4 file
+
+##Milestone 2
