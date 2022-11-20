@@ -35,7 +35,7 @@ Based on further tests and experiments we are going to decide which one to use a
 
 ## RL_AIDO
 
-See requirements.txt for the required packages in RL_AIDO folder. 
+See requirements.txt for the required packages in [RL_AIDO](/RL_AIDO)  folder. 
 Install them with 
 
 `$ pip3.8 install -e .`
