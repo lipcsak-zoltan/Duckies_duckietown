@@ -32,7 +32,9 @@ We used 2 approaches to this milestone:
 * Use [RL baseline 2](https://github.com/nicknochnack/ReinforcementLearningCourse/blob/main/Project%202%20-%20Self%20Driving.ipynb) policy 
 <a/>
 Based on further tests and experiments we are going to decide which one to use as a final policy.
+
 ## RL_AIDO
+
 See requirements.txt for the required packages in RL_AIDO folder. 
 Install them with 
 
