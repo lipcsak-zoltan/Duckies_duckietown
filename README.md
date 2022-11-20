@@ -35,9 +35,18 @@ Based on further tests and experiments we are going to decide which one to use a
 ## RL_AIDO
 See requirements.txt for the required packages in RL_AIDO folder. 
 Install them with 
+
 `pip3.8 install -e .`
+
+
 (It was tested with Python 3.8).
+
 Start training with
+
 `$ cd duckietown_rl`
-`$ python3.8 -m scripts.train_cnn --seed 123`.
-We tried to train some network. Some graphs avaliable [here](https://wandb.ai/dodekaeder/test1/reports/episode-reward-22-11-20-21-25-30---VmlldzozMDA1MTUy?accessToken=bcy084vs1ah194odlrbtds38ire0aljs61d9h3x2h2svbcyd4buax16fjw0l2h79). Based on the previous experiments, the training parameter needs to be chosen carefully. 
+
+`$ python3.8 -m scripts.train_cnn --seed 123`
+
+We tried to train some network. Some graphs avaliable [here](https://wandb.ai/dodekaeder/test1/reports/episode-reward-22-11-20-21-25-30---VmlldzozMDA1MTUy?accessToken=bcy084vs1ah194odlrbtds38ire0aljs61d9h3x2h2svbcyd4buax16fjw0l2h79). 
+
+Based on the previous experiments, the training parameter needs to be chosen carefully. 
