@@ -28,7 +28,7 @@ The run is recorded in the dl_basic.mp4 file
 ## Milestone 2
 
 We used 2 approaches to this milestone:
-* Use existing RL policy as starting point 
-* Creating a policy from scratch
+* Use [AIDO](https://docs.duckietown.org/daffy/AIDO/out/embodied_rl.html)RL policy as starting point 
+* Use [RL baseline 2](https://github.com/nicknochnack/ReinforcementLearningCourse/blob/main/Project%202%20-%20Self%20Driving.ipynb) policy 
 <a/>
 Based on further tests and experiments we are going to decide which one to use as a final policy.
