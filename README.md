@@ -49,6 +49,7 @@ Start training with
 
 `$ python3.8 -m scripts.train_cnn --seed 123`
 
-We tried to train the network in Linux. Some graphs avaliable [here](https://wandb.ai/dodekaeder/test1/reports/episode-reward-22-11-20-21-25-30---VmlldzozMDA1MTUy?accessToken=bcy084vs1ah194odlrbtds38ire0aljs61d9h3x2h2svbcyd4buax16fjw0l2h79) and we also updated them to the "results" folder.
+We tried to train the network in Linux. Some graphs avaliable [here](https://wandb.ai/dodekaeder/test1/reports/episode-reward-22-11-20-21-25-30---VmlldzozMDA1MTUy?accessToken=bcy084vs1ah194odlrbtds38ire0aljs61d9h3x2h2svbcyd4buax16fjw0l2h79) and we also updated them to the [results](/RL_AIDO/results)
+folder.
 
 Based on the previous experiments, the training parameter needs to be chosen carefully. For now, we only trained the policy on CPU, so it was slower than we expected. Hopefully GPU training will be available soon to set the parameters ideally to obtain solid results.
