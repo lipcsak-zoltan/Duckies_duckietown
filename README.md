@@ -28,6 +28,6 @@ The run is recorded in the dl_basic.mp4 file
 ## Milestone 2
 
 We used 2 approach to this milestone
-1.) Use existing RL policy as starting point 
-2.) Creating a policy from scratch
+Markup: *Use existing RL policy as starting point 
+        *Creating a policy from scratch
 Based on further tests and experiments we are going to decide which one to use as a final policy.
