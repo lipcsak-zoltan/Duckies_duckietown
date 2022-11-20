@@ -30,4 +30,5 @@ The run is recorded in the dl_basic.mp4 file
 We used 2 approach to this milestone
 * Use existing RL policy as starting point 
 * Creating a policy from scratch
+<a/>
 Based on further tests and experiments we are going to decide which one to use as a final policy.
