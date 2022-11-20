@@ -53,3 +53,5 @@ We tried to train the network in Linux. Some graphs avaliable [here](https://wan
 folder.
 
 Based on the previous experiments, the training parameter needs to be chosen carefully. For now, we only trained the policy on CPU, so it was slower than we expected. Hopefully GPU training will be available soon to set the parameters ideally to obtain solid results.
+The trained policy is saved to the result subdirectory of duckietown_rl, and can be tried out with
+`$ python3.8 -m scripts.test_cnn.py --seed 123`
