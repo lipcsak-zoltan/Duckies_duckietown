@@ -32,6 +32,10 @@ The run is recorded in the dl_basic.mp4 file
 * Press SPACE to start logging 
 * Make sure Howfast.py is in the same directory as manual_test.py\
 
-## Start training
+## Preprocess data
+*The raw images saved before needs to be pre-processed: run 
+`preprocess.py`
+
+with the appropriate file names
 
   
