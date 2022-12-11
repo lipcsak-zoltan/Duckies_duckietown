@@ -9,7 +9,7 @@ import os,glob
 trafo=transforms.ToTensor()
 
 
-def load_data(batch_ang, batch_vel, iftrain):
+def load_data(batch_ang, batch_vel, iftrain): #iftrain = True:traindata; False = testdata
     x_train=[]
     y_train_vel=[]
     y_train_ang=[]
@@ -17,11 +17,11 @@ def load_data(batch_ang, batch_vel, iftrain):
     data_train2 = []
 
     if iftrain == True:
-        IMAGE_PATH="/home/axelk/Documents/Data/train/"
+        IMAGE_PATH="/home/axelk/Documents/Data/train/" #You should modify this
     else:
         IMAGE_PATH="/home/axelk/Documents/Data/test/"
 
-    for filename in glob.glob(os.path.join(IMAGE_PATH, '*.png')):
+    for filename in glob.glob(os.path.join(IMAGE_PATH, '*.png')): #Images saved based on scheme seen in manual_log.py
         with open(filename, 'r') as f:
 
             im=Image.open(filename)
