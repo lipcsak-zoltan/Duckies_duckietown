@@ -7,7 +7,8 @@ Autonomous driving in Duckietown enviroment
 Facilitation of autonomous driving in Duckietown with Reinforcement Learning methods.
 ## Subject
 Deep Learning in Practice with Python and LUA (BMEVITMAV45)  
-
+## Reinforcement Learning Implemetation
+For the Reinforcement Learning Implemetation see the RL_milestone3 branch
 ## Installation
 Navigate to root of the project
 `pip3 install -e .`
