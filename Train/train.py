@@ -7,8 +7,7 @@ import torchvision
 import torch
 import torch.optim as optim
 import wandb
-
-wandb.init(project="train", entity="dodekaeder")
+#init wandb for yourself
 
 device = torch.device("cuda")
 
@@ -16,11 +15,6 @@ trainloader_vel, trainloader_ang = initialize.load_data(100,32,True)
 testloader_vel, testloader_ang = initialize.load_data(100,32,False)
 
 
-wandb.config = {
-  "learning_rate": 0.0005,
-  "epochs": 100,
-  "batch_size": 100
-}
 
 
 model_ang=model.angleCNN()
@@ -71,7 +65,7 @@ for epochs in range(50):
     
     
 
-print('Finished Training')
+print('Finished Training') #MODIFY for your preference
 path="/log/velocity.pth"
 torch.save(model_vel,path )
 
