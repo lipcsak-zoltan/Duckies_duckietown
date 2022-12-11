@@ -125,37 +125,6 @@ for i in range(1000):
     cumreward += rewards
     env.render()
 
-
-model = DQN.load("/home/user/Desktop/duckies/Duckies_duckietown/exercises/Training/Logs/11-Dec-2022_13.09.12/rl_model_5000_steps.zip")
-obs = env.reset()
-cumreward = 0
-for i in range(1000):
-    action, _states = model.predict(obs)
-    obs, rewards, done, info = env.step(action)
-    if done == True:
-        env.reset()
-        print("cumreward = ", cumreward)
-        cumreward = 0
-        continue
-    print(action, rewards, end= "\n")
-    cumreward += rewards
-    env.render()
-
-env = SelfEnv(map_name = "udem1", domain_rand = False, draw_bbox = False)
-obs = env.reset()
-cumreward = 0
-for i in range(1000):
-    action, _states = model.predict(obs)
-    obs, rewards, done, info = env.step(action)
-    if done == True:
-        env.reset()
-        print("cumreward = ", cumreward)
-        cumreward = 0
-        continue
-    print(action, rewards, end= "\n")
-    cumreward += rewards
-    env.render()
-
 env = SelfEnv(map_name = "zigzag_dists", domain_rand = False, draw_bbox = False)
 obs = env.reset()
 cumreward = 0
