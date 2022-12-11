@@ -58,7 +58,7 @@ for epochs in range(50):
                         _,right=torch.max(y_test,1)
                         total += y_test.size(0)
                         correct += (predicted == right).sum().item()
-                        #print(f'Accuracy of the network on the 2000 test images: {100*correct // total} %')
+                        #print(f'Accuracy of the network on the 5000 test images: {100*correct // total} %')
                         out=correct/total
                         wandb.log({"accyv": out})
 
@@ -87,13 +87,24 @@ for epochs in range(100):
 
         # print statistics
         running_loss += loss.item()
-        if i % 10 == 9:    # print every 2000 mini-batches
+        if i % 10 == 9:    
             print(f'[{epochs + 1}, {i + 1:5d}] loss: {running_loss / 10:.3f}')
+            wandb.log({"lossa": running_loss})
             running_loss = 0.0
             correct = 0
             total = 0
-            wandb.log({"lossa": running_loss})
-
+            
+            with torch.no_grad():
+                    for data2 in testloader_ang:
+                        x_test, y_test = data2[0].to(device), data2[1].to(device)   
+                        outputs = model_ang(x_test)
+                        _, predicted = torch.max(outputs.data,1)
+                        _,right=torch.max(y_test,1)
+                        total += y_test.size(0)
+                        correct += (predicted == right).sum().item()
+                        #print(f'Accuracy of the network on the 5000 test images: {100*correct // total} %')
+                        out=correct/total
+                        wandb.log({"accaa": out})
 path="log/angle.pth"
 torch.save(model_ang,path )
 
