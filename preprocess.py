@@ -6,8 +6,8 @@ import numpy as np
 import cv2
 
 
-SOURCE_PATH="/home/axelk/Documents/Data/images/"
-TARGET_PATH="/home/axelk/Documents/Data/train/"
+SOURCE_PATH="./Data/images/" #You should modify this based on where your source files are
+TARGET_PATH="/home/axelk/Data/train/" #and where yu want to save the processed images 
 
 white_lower = np.array([np.round(  0 / 2), np.round(0.5 * 255), np.round(0.00 * 255)])
 white_upper = np.array([np.round(360 / 2), np.round(1.00 * 255), np.round(0.30 * 255)])
@@ -57,4 +57,4 @@ for filename in glob.glob(os.path.join(SOURCE_PATH, '*.jpeg')):
         cv2.imwrite(os.path.join(TARGET_PATH,targetname),output)
     i+=1
 logap=np.array(log,dtype=str)
-np.savetxt('log.txt',logap, fmt='%s')
+np.savetxt('log.txt',logap, fmt='%s') #Simple logging
