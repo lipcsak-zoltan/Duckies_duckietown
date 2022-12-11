@@ -42,5 +42,8 @@ with the appropriate file names
 * Run 
 `train.py` 
 in /Train/ directory. 
-* Don't forget to sign in with yout wandb credits, and modify those in the scrip
+* Don't forget to sign in with yout wandb credits, and modify those in the script
+* Also check every path for training data
+## Test
+*Run test.py
   
