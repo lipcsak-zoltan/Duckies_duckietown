@@ -37,6 +37,7 @@ with the appropriate file names you logged.
 in /Train/ directory. 
 * Don't forget to sign in with yout wandb credits, and modify those in the script
 * Also check every path for training data
+* A fractionm of the training data can be found [here](https://bmeedu-my.sharepoint.com/:f:/g/personal/katonaa_edu_bme_hu/Eo-8rKw1fv9GjJUyLXWmdbMB44LxB9gA2NvWmQsKA9xkRA?e=4162CH)
 ## Test
 * Run
 `test.py` 
