@@ -48,7 +48,8 @@ in /Train/ directory.
 * Also check every path for training data
 ## Test
 * Run
-`test.py`
+`test.py` 
 * See 
 `testrun1.mp4` 
-  
+* See
+`Unknown_test.mkv` to check how the prediction works on an unknow, complex map. 
