@@ -34,8 +34,10 @@ The run is recorded in the dl_basic.mp4 file
 
 ## Preprocess data
 *The raw images saved before needs to be pre-processed: run 
+
 `preprocess.py`
 
 with the appropriate file names
+
 
   
