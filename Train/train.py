@@ -25,7 +25,7 @@ model_vel.to(device)
 
 criterion=torch.nn.CrossEntropyLoss()
 optimizer_vel=optim.SGD(model_vel.parameters(), lr=0.0005,momentum=0.678)
-optimizer_ang=optim.SGD(model_ang.parameters(), lr=0.05,momentum=0.9)
+optimizer_ang=optim.SGD(model_ang.parameters(), lr=0.05,momentum=0.68)
 
 for epochs in range(50): 
     running_loss = 0.0
