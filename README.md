@@ -43,4 +43,4 @@ in /Train/ directory.
 `testrun1.mp4` 
 * See
 `Unknown_test.mkv` to check how the prediction works on an unknow, complex map. 
-* See Train/log folder for more log files, wandb accuracies, losses. Accuricies are NOT in percent, they are dimension free rletive quantities, i.e. 1.0 = 100%.
+* See Train/log folder for more log files, wandb accuracies, losses. Accuracies are NOT in percent, they are dimension free rletive quantities, i.e. 1.0 = 100%.
