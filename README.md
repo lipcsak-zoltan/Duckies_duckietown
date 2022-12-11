@@ -26,11 +26,13 @@ To use them, copy them to the folder containing the original maps (if given the 
 The run is recorded in the dl_basic.mp4 file
 
 ## Start logging
-* Run manual_test.py
+* Run
+`manual_test.py`
     * You can modify action[] entries for different keys
     * navigate in the map with the keyboard
 * Press SPACE to start logging 
-* Make sure Howfast.py is in the same directory as manual_test.py\
+* Make sure Howfast.py is in the same directory as 
+`manual_test.py`
 
 ## Preprocess data
 * The raw images saved before needs to be pre-processed: run 
@@ -45,6 +47,8 @@ in /Train/ directory.
 * Don't forget to sign in with yout wandb credits, and modify those in the script
 * Also check every path for training data
 ## Test
-* Run test.py
-* See testrun1.mp4 
+* Run
+`test.py`
+* See 
+`testrun1.mp4` 
   
