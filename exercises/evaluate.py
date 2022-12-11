@@ -1,4 +1,4 @@
-import gym
+import gym 
 from stable_baselines3 import DQN, HerReplayBuffer
 from stable_baselines3 import PPO
 from stable_baselines3.common.vec_env import VecFrameStack
@@ -26,9 +26,8 @@ import cv2
 import time
 import tensorflow as tf
 
-
 class SelfEnv(gym.Env):    # The wrapper encapsulates the Duckietown env
-    def __init__(self, log_path, gain=1.0, trim=0.0, radius=0.0318, k=27.0, limit=1.0, **kwargs):
+    def __init__(self, gain=1.0, trim=0.0, radius=0.0318, k=27.0, limit=1.0, **kwargs):
         self.duckie_env = DuckietownEnv(gain, trim, radius, k, limit, **kwargs)#, camera_width=80, camera_height=60)
 
         #self.action_space = self.duckie_env.action_space
@@ -38,7 +37,6 @@ class SelfEnv(gym.Env):    # The wrapper encapsulates the Duckietown env
         )
         self.reward_range = self.duckie_env.reward_range
 
-        self.file_writer = tf.summary.create_file_writer(log_path)
         self.step_idx = 0
         self.full_step_idx = 0
         self.acc_reward = 0
@@ -51,17 +49,10 @@ class SelfEnv(gym.Env):    # The wrapper encapsulates the Duckietown env
             new_action = np.array([0.88, 0.44])
         elif action == 2: # right
             new_action = np.array([0, -1])
-        # elif action == 3: # backward
-        #     new_action = np.array([-0.5, 0])    
         obs, reward, done, info = self.duckie_env.step(new_action)   # calls the gym env methods
         #obs = self._blur(obs)                             # applies your specific treatment
         obs = self.preprocess_obs(obs)
         self.acc_reward += reward
-        with self.file_writer.as_default():
-            tf.summary.scalar('reward', reward, step=self.full_step_idx)
-            if done:
-                tf.summary.scalar('reward/acc_reward', self.acc_reward, step=self.iter_idx)
-                tf.summary.scalar('reward/episode_len', self.step_idx, step=self.iter_idx)
         self.full_step_idx += 1
         self.step_idx += 1
 
@@ -101,31 +92,82 @@ class SelfEnv(gym.Env):    # The wrapper encapsulates the Duckietown env
         #self.obs_seq = np.concatenate((obs, self.obs_seq[:,:,:16]), axis = 2)
         return obs
 
+    
+env = SelfEnv(map_name = "loop_empty", domain_rand = False, draw_bbox = False)
+
+model = DQN.load("/home/user/Desktop/duckies/Duckies_duckietown/exercises/Training/Logs/11-Dec-2022_13.09.12/rl_model_5000_steps.zip")
+obs = env.reset()
+cumreward = 0
+for i in range(1000):
+    action, _states = model.predict(obs)
+    obs, rewards, done, info = env.step(action)
+    if done == True:
+        env.reset()
+        print("cumreward = ", cumreward)
+        cumreward = 0
+        continue
+    print(action, rewards, end= "\n")
+    cumreward += rewards
+    env.render()
+
+env = SelfEnv(map_name = "udem1", domain_rand = False, draw_bbox = False)
+obs = env.reset()
+cumreward = 0
+for i in range(1000):
+    action, _states = model.predict(obs)
+    obs, rewards, done, info = env.step(action)
+    if done == True:
+        env.reset()
+        print("cumreward = ", cumreward)
+        cumreward = 0
+        continue
+    print(action, rewards, end= "\n")
+    cumreward += rewards
+    env.render()
 
 
-now = time.localtime()
-subdir = time.strftime("%d-%b-%Y_%H.%M.%S", now)
-log_path = os.path.join('Training', 'Logs', subdir)
-orig_log_path = os.path.join('Training', 'Logs')
+model = DQN.load("/home/user/Desktop/duckies/Duckies_duckietown/exercises/Training/Logs/11-Dec-2022_13.09.12/rl_model_5000_steps.zip")
+obs = env.reset()
+cumreward = 0
+for i in range(1000):
+    action, _states = model.predict(obs)
+    obs, rewards, done, info = env.step(action)
+    if done == True:
+        env.reset()
+        print("cumreward = ", cumreward)
+        cumreward = 0
+        continue
+    print(action, rewards, end= "\n")
+    cumreward += rewards
+    env.render()
 
+env = SelfEnv(map_name = "udem1", domain_rand = False, draw_bbox = False)
+obs = env.reset()
+cumreward = 0
+for i in range(1000):
+    action, _states = model.predict(obs)
+    obs, rewards, done, info = env.step(action)
+    if done == True:
+        env.reset()
+        print("cumreward = ", cumreward)
+        cumreward = 0
+        continue
+    print(action, rewards, end= "\n")
+    cumreward += rewards
+    env.render()
 
-
-env = SelfEnv(log_path, map_name = "loop_empty", domain_rand = False, draw_bbox = False)
-
-checkpoint_callback = CheckpointCallback(
-  save_freq=5000,
-  save_path=log_path,
-  name_prefix="rl_model"
-)
-
-
-
-model = DQN("CnnPolicy", env, buffer_size=200000, verbose=1, tensorboard_log=orig_log_path, exploration_fraction=0.1, learning_rate=0.00005)
-#model = PPO("CnnPolicy", env, verbose=1, tensorboard_log=orig_log_path)
-
-
-model.learn(1000000, callback=checkpoint_callback)
-
-model.save("first_model")
-
-env.close()
+env = SelfEnv(map_name = "zigzag_dists", domain_rand = False, draw_bbox = False)
+obs = env.reset()
+cumreward = 0
+for i in range(1000):
+    action, _states = model.predict(obs)
+    obs, rewards, done, info = env.step(action)
+    if done == True:
+        env.reset()
+        print("cumreward = ", cumreward)
+        cumreward = 0
+        continue
+    print(action, rewards, end= "\n")
+    cumreward += rewards
+    env.render() 
+    
