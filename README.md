@@ -45,5 +45,6 @@ in /Train/ directory.
 * Don't forget to sign in with yout wandb credits, and modify those in the script
 * Also check every path for training data
 ## Test
-*Run test.py
+* Run test.py
+* See testrun1.mp4 
   
