@@ -66,7 +66,7 @@ for epochs in range(50):
     
 
 print('Finished Training') #MODIFY for your preference
-path="/log/velocity.pth"
+path="log/velocity.pth"
 torch.save(model_vel,path )
 
 
@@ -94,6 +94,6 @@ for epochs in range(100):
             total = 0
             wandb.log({"lossa": running_loss})
 
-path="/log/angle.pth"
+path="log/angle.pth"
 torch.save(model_ang,path )
 
