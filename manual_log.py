@@ -85,9 +85,9 @@ def update(dt):
     wheel_distance = 0.102
     min_rad = 0.08
     
-    IMAGE_PATH = "~/Documents/Data/images/" #where to save the pictures. MODIFY 
+    IMAGE_PATH = "DATA/" #where to save the pictures. MODIFY 
      # Where to save actions and properties: 
-    BASE_PATH3 = "/home/axelkatona/Documents/Data/properties/"
+    BASE_PATH3 = "DATA/"
 
     action = np.array([0.0, 0.0]) 
 
