@@ -1,3 +1,5 @@
+""" Script for preprocessing raw data"""
+
 from PIL import Image
 import os,glob
 import numpy as np
