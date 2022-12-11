@@ -10,21 +10,11 @@ Deep Learning in Practice with Python and LUA (BMEVITMAV45)
 
 ## Installation
 Navigate to root of the project
-
 `pip3 install -e .`
+The project was tested under python3.8, and CUDA11.7.
 ## Exercises
 ### Running manual_control.py
 `python manual_control.py --env-name Duckietown`
-### Creating a new map
-We have created two new maps, named new_map.yaml and customMap.yaml, found in Duckies_duckietown/gym_duckietown/maps/
-
-To use them, copy them to the folder containing the original maps (if given the --map-name parameter, the program logs where it searches for it, e.g. lib/python3.6/site-packages/duckietown_world/data/gd1/maps)
-
-### Running the basic_control.py
-`python basic_control.py --map-name new_map`
-
-The run is recorded in the dl_basic.mp4 file
-
 ## Start logging
 * Run
 `manual_test.py`
@@ -37,7 +27,7 @@ The run is recorded in the dl_basic.mp4 file
 ## Preprocess data
 * The raw images saved before needs to be pre-processed: run 
 `preprocess.py`
-with the appropriate file names
+with the appropriate file names you logged.
 
 
 ## Train on data 
@@ -53,3 +43,4 @@ in /Train/ directory.
 `testrun1.mp4` 
 * See
 `Unknown_test.mkv` to check how the prediction works on an unknow, complex map. 
+* See Train/log folder for more log files, wandb accuracies etc.
