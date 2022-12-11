@@ -1,3 +1,5 @@
+
+"""loads train and test database"""
 from PIL import Image
 import numpy as np
 from torchvision import transforms 
@@ -17,9 +19,9 @@ def load_data(batch_ang, batch_vel, iftrain): #iftrain = True:traindata; False =
     data_train2 = []
 
     if iftrain == True:
-        IMAGE_PATH="/home/axelk/Documents/Data/train/" #You should modify this to point to your train data
+        IMAGE_PATH="Data/" #You should modify this to point to your train data
     else:
-        IMAGE_PATH="/home/axelk/Documents/Data/test/" #and modify this for test data
+        IMAGE_PATH="Data/test/" #and modify this for test data
 
     for filename in glob.glob(os.path.join(IMAGE_PATH, '*.png')): #Images saved based on scheme seen in preprocess.py
         with open(filename, 'r') as f:
