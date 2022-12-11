@@ -25,11 +25,13 @@ To use them, copy them to the folder containing the original maps (if given the 
 
 The run is recorded in the dl_basic.mp4 file
 
-## Run logging script
+## Start logging
 * Run manual_test.py
-* * You can modify action[] entries for different keys
-* Press SPACE to log 
+    * You can modify action[] entries for different keys
+    * navigate in the map with the keyboard
+* Press SPACE to start logging 
 * Make sure Howfast.py is in the same directory as manual_test.py\
 
+## Start training
 
   
