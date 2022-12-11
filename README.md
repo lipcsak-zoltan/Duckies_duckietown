@@ -24,3 +24,19 @@ To use them, copy them to the folder containing the original maps (if given the 
 `python basic_control.py --map-name new_map`
 
 The run is recorded in the dl_basic.mp4 file
+
+## Run logging script
+
+ Markup : * Run 
+ `manual_test.py`
+ 
+              * You can modify action[] entries for different keys
+          * Press 
+          `SPACE`
+          
+          to log 
+          * Make sure 
+          `Howfast.py`
+          
+          is in the same directory as manual_test.py
+  
