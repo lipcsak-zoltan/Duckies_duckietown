@@ -1,10 +1,11 @@
 # Duckietown project by the Duckies
+## UPDATE: VIDEO FOR THE EXAM on 17th Jan
+The video for the exam is available [here](https://bmeedu-my.sharepoint.com/:v:/g/personal/katonaa_edu_bme_hu/EY0erGUlVk5Cg3uGPV0VZ5YBVsuRln5eLpTaA6SPBDlR9w?e=vRC6q6)
 ## Team Duckies  
 Members: Lipcsák Zoltán István (XWSJPH), Pólya Mátyás Dániel (BBAGDV), Katona Axel Attila (TAUHO5)
 ## Topic
 Autonomous driving in Duckietown enviroment  
-## UPDATE: VIDEO FOR THE EXAM on 17th Jan
-The video for the exam is available [here](https://bmeedu-my.sharepoint.com/:v:/g/personal/katonaa_edu_bme_hu/EY0erGUlVk5Cg3uGPV0VZ5YBVsuRln5eLpTaA6SPBDlR9w?e=vRC6q6)
+
 ## Project description 
 Facilitation of autonomous driving in Duckietown with Reinforcement Learning methods.
 ## Subject
